@@ -1,10 +1,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WordCount;
+using WordCounter;
 
-namespace WordCount.Tests
+namespace WordCounter.Tests
 {
   [TestClass]
-  public class WordCountTest
+  public class WordCounterTests
   {
     [TestMethod]
     public void WordCount_IsInSentence_True()
