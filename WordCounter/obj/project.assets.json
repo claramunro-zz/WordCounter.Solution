@@ -7042,11 +7042,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ClaraMunro/Desktop/WordCounter.Solution2/WordCounter/WordCounter.csproj",
+      "projectUniqueName": "/Users/ClaraMunro/Desktop/WordCounter.Solution/WordCounter/WordCounter.csproj",
       "projectName": "WordCounter",
-      "projectPath": "/Users/ClaraMunro/Desktop/WordCounter.Solution2/WordCounter/WordCounter.csproj",
+      "projectPath": "/Users/ClaraMunro/Desktop/WordCounter.Solution/WordCounter/WordCounter.csproj",
       "packagesPath": "/Users/ClaraMunro/.nuget/packages/",
-      "outputPath": "/Users/ClaraMunro/Desktop/WordCounter.Solution2/WordCounter/obj/",
+      "outputPath": "/Users/ClaraMunro/Desktop/WordCounter.Solution/WordCounter/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ClaraMunro/.nuget/NuGet/NuGet.Config"

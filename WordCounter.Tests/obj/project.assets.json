@@ -8502,11 +8502,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ClaraMunro/Desktop/WordCounter.Solution2/WordCounter.Tests/WordCounter.Tests.csproj",
+      "projectUniqueName": "/Users/ClaraMunro/Desktop/WordCounter.Solution/WordCounter.Tests/WordCounter.Tests.csproj",
       "projectName": "WordCounter.Tests",
-      "projectPath": "/Users/ClaraMunro/Desktop/WordCounter.Solution2/WordCounter.Tests/WordCounter.Tests.csproj",
+      "projectPath": "/Users/ClaraMunro/Desktop/WordCounter.Solution/WordCounter.Tests/WordCounter.Tests.csproj",
       "packagesPath": "/Users/ClaraMunro/.nuget/packages/",
-      "outputPath": "/Users/ClaraMunro/Desktop/WordCounter.Solution2/WordCounter.Tests/obj/",
+      "outputPath": "/Users/ClaraMunro/Desktop/WordCounter.Solution/WordCounter.Tests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ClaraMunro/.nuget/NuGet/NuGet.Config"
@@ -8520,8 +8520,8 @@
       "frameworks": {
         "netcoreapp1.1": {
           "projectReferences": {
-            "/Users/ClaraMunro/Desktop/WordCounter.Solution2/WordCounter/WordCounter.csproj": {
-              "projectPath": "/Users/ClaraMunro/Desktop/WordCounter.Solution2/WordCounter/WordCounter.csproj"
+            "/Users/ClaraMunro/Desktop/WordCounter.Solution/WordCounter/WordCounter.csproj": {
+              "projectPath": "/Users/ClaraMunro/Desktop/WordCounter.Solution/WordCounter/WordCounter.csproj"
             }
           }
         }
