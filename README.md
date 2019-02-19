@@ -45,11 +45,22 @@ Each spec should include a specific input and output, and a description sentence
 
 
 ## Setup Instructions
-* Clone repository
-* Add to desktop using "git clone"
+Requirements Software
+Download .NET Core 1.1.4 SDK and .NET Core Runtime 1.1.2 and install them. Download Mono and install it.
+
+* Clone this repository: $ git clone repo name
+* Change into the work directory:: $ cd WordCounter.Solution
+* To edit the project, open the project in your preferred text editor.
+
+To run the program, first navigate to the location of the WordCounter.cs file then compile and execute: $ cd WordCounter/Models $ mcs WordCounter.cs; mono WordCounter.exe;
+
+To run the tests, use these commands: $ cd WordCounter.Tests $ dotnet test
 
 ## Technologies Used
-* C# & .NET
+* C#
+* .NET Core 1.1.4 SDK
+* .NET Core Runtime 1.1.2
+* Mono
 
 ## GitHub Repository
 https://github.com/claramunro/WordCounter.Solution
