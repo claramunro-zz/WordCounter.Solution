@@ -2,11 +2,24 @@ namespace WordCounter
 {
   public class Word
   {
-    public int wordCount;
-    private string inputWord;
-    private string inputSentence;
+    private int _wordCount;
+    private string _inputSentence;
+    private string _inputWord;
 
-      // logic will go here
+    public int MatchCounter(string inputSentence, string inputWord, int wordCount)
+    {
+      string[] split = inputSentence.Split(' ');
+      
+      foreach (var word in split)
+      {
+        if (inputWord === word)
+        {
+          wordCount++;
+        }
+      }
+      
+      return wordCount;
+      }
 
   }
 }

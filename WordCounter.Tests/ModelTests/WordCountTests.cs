@@ -4,12 +4,12 @@ using WordCounter;
 namespace WordCounter.Tests
 {
   [TestClass]
-  public class WordCounterTests
+  public class WordCountTests
   {
-    [TestMethod]
+   [TestMethod]
     public void WordCount_IsInSentence_True()
     {
       //testing code will go here
     }
+    }
   }
-}
