@@ -7,28 +7,30 @@ namespace WordCounter.Tests
   public class WordCountTests
   {
 
-Behavior 1: Takes wordInput of single letter & a single letter sentence & returns wordCount
+    [TestMethod]
+    public void DoWordsMatch_InputAs1Character_True()
+    {
+      string inputSentence = "c";
+      string inputWord = "c";
+      int wordCount = 0;
 
-Input: "c" and "c"
-Output: "1"
-This is the simplest behavior because wordInput is only one letter and sentenceInput is only one letter.
+      MakeWordsPublic newMakeWordsPublic = new MakeWordsPublic (inputSentence, inputWord, wordCount);
 
-Behavior: Takes wordInput of single letter & two single letter "sentence" & returns wordCount
+      Assert.AreEqual(1, newMakeWordsPublic.DoWordsMatch(inputSentence, inputWord, wordCount));
+    }
 
-Input: "c" and "c c"
-Output: "2"
-This would be the next behavior because wordInput is only one letter and sentenceInput is two "words".
 
-Behavior: Takes wordInput of word & sentence & returns wordCount
+    [TestMethod]
+    public void DoWordsMatch_InputAs2Character_True()
+    {
+      string inputSentence = "clara c is c";
+      string inputWord = "c";
+      int wordCount = 0;
 
-Input: "cat" and "The cat in the hat"
-Output: "1"
-This would be the next behavior because following 1 letter is one word & sentence input is looking for word.
+      MakeWordsPublic newMakeWordsPublic = new MakeWordsPublic (inputSentence, inputWord, wordCount);
 
-Behavior: Takes wordInput of word & sentence with word as part of another larger word (cat & cathedral) & returns correct wordCount
+      Assert.AreEqual(2, newMakeWordsPublic.DoWordsMatch(inputSentence, inputWord, wordCount));
+    }
 
-Input: "cat" and "The cat went to the cathedral"
-Output: "1"
-This is the final behavior, word (cat) appears in sentence & also characters within the word appear within another word (cathedral).
     }
   }

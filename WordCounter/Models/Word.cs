@@ -1,20 +1,23 @@
 namespace WordCounter
+
 {
-  public class Word
+  public class MakeWordsPublic
+
   {
     private int _wordCount;
     private string _inputSentence;
     private string _inputWord;
 
+
     // makes private words public
-   public Word(string inputSentence, string inputWord, int wordCount)
+   public MakeWordsPublic(string inputSentence, string inputWord, int wordCount)
    {
      _wordCount = wordCount;
      _inputWord = inputWord;
      _inputSentence = inputSentence;
    }
 
-    public int MatchCounter(string inputSentence, string inputWord, int wordCount)
+    public int DoWordsMatch(string inputSentence, string inputWord, int wordCount)
     {
       string[] split = inputSentence.Split(' ');
       
@@ -27,7 +30,7 @@ namespace WordCounter
       }
       
       return wordCount;
-      }
 
+      }
   }
 }
