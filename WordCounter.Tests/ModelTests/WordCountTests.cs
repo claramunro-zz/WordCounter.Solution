@@ -32,5 +32,17 @@ namespace WordCounter.Tests
       Assert.AreEqual(2, newMakeWordsPublic.DoWordsMatch(inputSentence, inputWord, wordCount));
     }
 
+    [TestMethod]
+    public void DoWordsMatch_InputAsWord2Character_True()
+    {
+      string inputSentence = "clara c is clara clara";
+      string inputWord = "clara";
+      int wordCount = 0;
+
+      MakeWordsPublic newMakeWordsPublic = new MakeWordsPublic (inputSentence, inputWord, wordCount);
+
+      Assert.AreEqual(3, newMakeWordsPublic.DoWordsMatch(inputSentence, inputWord, wordCount));
+    }
+
     }
   }
