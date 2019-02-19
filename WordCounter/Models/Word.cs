@@ -12,7 +12,7 @@ namespace WordCounter
       
       foreach (var word in split)
       {
-        if (inputWord === word)
+        if (inputWord == word)
         {
           wordCount++;
         }
