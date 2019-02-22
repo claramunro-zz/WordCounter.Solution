@@ -1,7 +1,9 @@
-namespace WordCounter
+using System;
+
+namespace WordCounter.Models
 
 {
-  public class MakeWordsPublic
+  public class WordClass
 
   {
     private int _wordCount;
@@ -10,7 +12,7 @@ namespace WordCounter
 
 
     // makes private words public
-   public MakeWordsPublic(string inputSentence, string inputWord, int wordCount)
+   public WordClass(string inputSentence, string inputWord, int wordCount)
    {
      _wordCount = wordCount;
      _inputWord = inputWord;
