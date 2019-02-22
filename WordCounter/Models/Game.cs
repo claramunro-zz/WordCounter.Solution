@@ -3,7 +3,7 @@ using System;
 namespace WordCounter.Models
 
 {
-  public class WordClass
+  public class Game
 
   {
     private int _wordCount;
@@ -12,7 +12,7 @@ namespace WordCounter.Models
 
 
     // makes private words public
-   public WordClass(string inputSentence, string inputWord, int wordCount)
+   public Game(string inputSentence, string inputWord, int wordCount)
    {
      _wordCount = wordCount;
      _inputWord = inputWord;
