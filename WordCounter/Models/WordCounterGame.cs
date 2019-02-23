@@ -13,6 +13,7 @@ namespace WordCounter.Models
 
     public string GetWord() { return _inputWord; }
     public string GetSentence() { return _inputSentence; }
+    public int GetWordCount() { return _wordCount; }
 
    public WordCounterGame(string inputSentence, string inputWord, int wordCount)
    {
@@ -32,7 +33,8 @@ namespace WordCounter.Models
           wordCount++;
         }
       }
-      return wordCount;
+      _wordCount = wordCount;
+      return _wordCount;
       }
   }
 }
