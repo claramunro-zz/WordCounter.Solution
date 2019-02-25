@@ -16,9 +16,11 @@ namespace WordCounter.Controllers
     public ActionResult New() { return View(); }
 
     [HttpPost("/game")]
-    public ActionResult Create(string inputWord, string inputSentence, int wordCount)
+    public ActionResult Create(string inputSentence, string inputWord)
     {
-      WordCounterGame thisGame = new WordCounterGame(inputWord, inputSentence, wordCount);
+      int wordCount = 0;
+      WordCounterGame thisGame = new WordCounterGame(inputSentence, inputWord, wordCount);
+      thisGame.DoWordsMatch(inputSentence, inputWord, wordCount);
       return View("Index", thisGame);
     }
   }

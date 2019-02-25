@@ -11,8 +11,8 @@ namespace WordCounter.Models
     private string _inputWord;
 
 
-    public string GetWord() { return _inputWord; }
     public string GetSentence() { return _inputSentence; }
+    public string GetWord() { return _inputWord; }
     public int GetWordCount() { return _wordCount; }
 
    public WordCounterGame(string inputSentence, string inputWord, int wordCount)
