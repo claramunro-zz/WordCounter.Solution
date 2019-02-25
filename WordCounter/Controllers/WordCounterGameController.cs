@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
-using WordCounter.Models;
 using System.Collections.Generic;
+using WordCounterGame.Models;
 
 
-namespace WordCounter.Controllers
+namespace WordCounterGame.Controllers
 
 {
   public class WordCounterGameController : Controller
@@ -19,7 +19,7 @@ namespace WordCounter.Controllers
     public ActionResult Create(string inputSentence, string inputWord)
     {
       int wordCount = 0;
-      WordCounterGame thisGame = new WordCounterGame(inputSentence, inputWord, wordCount);
+      WordCounterGame1 thisGame = new WordCounterGame1(inputSentence, inputWord, wordCount);
       thisGame.DoWordsMatch(inputSentence, inputWord, wordCount);
       return View("Index", thisGame);
     }

@@ -1,10 +1,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WordCounter;
+using WordCounterGame.Models;
 
-namespace WordCounter.Tests
+namespace WordCounterGame.Tests
 {
   [TestClass]
-  public class WordCountTests
+  public class WordCounterGame
   {
 
     [TestMethod]
@@ -14,9 +14,9 @@ namespace WordCounter.Tests
       string inputWord = "c";
       int wordCount = 0;
 
-      MakeWordsPublic newMakeWordsPublic = new MakeWordsPublic (inputSentence, inputWord, wordCount);
+      WordCounterGame1 thisGame = new WordCounterGame1 (inputSentence, inputWord, wordCount);
 
-      Assert.AreEqual(1, newMakeWordsPublic.DoWordsMatch(inputSentence, inputWord, wordCount));
+      Assert.AreEqual(1, thisGame.DoWordsMatch(inputSentence, inputWord, wordCount));
     }
 
 
@@ -27,9 +27,9 @@ namespace WordCounter.Tests
       string inputWord = "c";
       int wordCount = 0;
 
-      MakeWordsPublic newMakeWordsPublic = new MakeWordsPublic (inputSentence, inputWord, wordCount);
+      WordCounterGame1 thisGame = new WordCounterGame1 (inputSentence, inputWord, wordCount);
 
-      Assert.AreEqual(2, newMakeWordsPublic.DoWordsMatch(inputSentence, inputWord, wordCount));
+      Assert.AreEqual(2, thisGame.DoWordsMatch(inputSentence, inputWord, wordCount));
     }
 
     [TestMethod]
@@ -39,9 +39,9 @@ namespace WordCounter.Tests
       string inputWord = "clara";
       int wordCount = 0;
 
-      MakeWordsPublic newMakeWordsPublic = new MakeWordsPublic (inputSentence, inputWord, wordCount);
+      WordCounterGame1 thisGame = new WordCounterGame1 (inputSentence, inputWord, wordCount);
 
-      Assert.AreEqual(3, newMakeWordsPublic.DoWordsMatch(inputSentence, inputWord, wordCount));
+      Assert.AreEqual(3, thisGame.DoWordsMatch(inputSentence, inputWord, wordCount));
     }
 
     }

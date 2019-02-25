@@ -1,9 +1,9 @@
 using System;
 
-namespace WordCounter.Models
+namespace WordCounterGame.Models
 
 {
-  public class WordCounterGame
+  public class WordCounterGame1
 
   {
     private int _wordCount;
@@ -15,7 +15,7 @@ namespace WordCounter.Models
     public string GetWord() { return _inputWord; }
     public int GetWordCount() { return _wordCount; }
 
-   public WordCounterGame(string inputSentence, string inputWord, int wordCount)
+   public WordCounterGame1(string inputSentence, string inputWord, int wordCount)
    {
      _wordCount = wordCount;
      _inputWord = inputWord;
