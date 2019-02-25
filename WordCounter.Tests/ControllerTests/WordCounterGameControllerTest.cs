@@ -12,7 +12,17 @@ namespace WordCounterGame.Tests
         [TestMethod]
         public void IndexWordCounterGame_ReturnsCorrectViewPage_True()
         {
-        
+            WordCounterGameController controller = new WordCounterGameController();
+            ActionResult indexView = controller.Index();
+            Assert.IsInstanceOfType(indexView, typeof(ViewResult));
         }
+
+        [TestMethod]
+        public void New_ReturnsCorrectViewPage_True()
+        {
+            WordCounterGameController controller = new WordCounterGameController();
+            ActionResult indexView = controller.New();
+            Assert.IsInstanceOfType(indexView, typeof(ViewResult));
+        }      
     }
 }

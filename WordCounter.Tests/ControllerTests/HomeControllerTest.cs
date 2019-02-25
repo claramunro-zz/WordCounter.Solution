@@ -14,7 +14,7 @@ namespace WordCounterGame.Tests
         {
             HomeController controller = new HomeController();
             ActionResult indexView = controller.Index();
-            Assert.IsNotInstanceOfType(indexView, typeof(ViewResult));
+            Assert.IsInstanceOfType(indexView, typeof(ViewResult));
         }
     }
 }
