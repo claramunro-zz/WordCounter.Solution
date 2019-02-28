@@ -47,16 +47,27 @@ Each spec should include a specific input and output, and a description sentence
 
 ## Setup Instructions
 
-**.NET framework (which includes the C# language)**
-* Download this .NET Core SDK (Software Development Kit).
+### Install .NET framework (which includes the C# language)
+#### Mac .NET
+* Download this [.NET Core SDK (Software Development Kit)](https://download.microsoft.com/download/F/4/F/F4FCB6EC-5F05-4DF8-822C-FF013DF1B17F/dotnet-dev-osx-x64.1.1.4.pkg).
 * Clicking this link will prompt a .pkg file download from Microsoft.
 * Open the file. This will launch an installer. Follow the steps it walks through. The default settings it suggests are alright.
-* Confirm the installation is successful by opening the Terminal and running the command $ dotnet --version. You should see something like this in response (version numbers do not need to be the exact same): **1.1.4
-* This means .NET (and therefore C# too) is successfully installed. Great!
+* Confirm the installation is successful by opening the Terminal and running the command $ dotnet --version. You should see something like this in response (version numbers do not need to be the exact same): **1.1.4**
+**This means .NET (and therefore C# too) is successfully installed.**
 
 ----
 
-**Mono: Mac Version**
+#### Windows .NET
+** These Windows instructions assume you're using Windows 10. If you currently run Windows 7 or Windows 8, you may have a free upgrade available.
+** Download either the the [64-bit .NET Core SDK (Software Development Kit)](https://download.microsoft.com/download/F/4/F/F4FCB6EC-5F05-4DF8-822C-FF013DF1B17F/dotnet-dev-win-x64.1.1.4.exe). or the [32-bit .NET Core SDK (Software Development Kit)](https://download.microsoft.com/download/F/4/F/F4FCB6EC-5F05-4DF8-822C-FF013DF1B17F/dotnet-dev-win-x86.1.1.4.exe), depending on your specific operating system. Clicking these links will prompt a .exe file download from Microsoft.
+** Open the file and follow the steps provided by the installer.
+** Confirm the installation is successful by opening a new Windows PowerShell window and running the command dotnet --version. You should see something like this in response (version numbers do not need to be the same): **1.1.4**
+**This means .NET (and therefore C# too) is installed, and our computer recognizes the $ dotnet command.**
+
+----
+
+### Installing Mono
+#### Mac Mono
 * Download the Mac version from the Download section of the Mono website.
 * Open the downloaded .pkg file to run the installation wizard.
 * Confirm the installation is successful by running the command $ mono --version. You should see a response like this (it doesn't have to match exactly):
@@ -77,7 +88,7 @@ Copyright (C) 2002-2014 Novell, Inc, Xamarin Inc and Contributors. www.mono-proj
 
 ----
 
-**Mono: Windows Version**
+#### Windows Mono
 * Download the Windows version from the Download section of the Mono website.
 * Open the downloaded file to launch the installation wizard. Pay very careful attention the location you install Mono in, even if using the default location. We'll need this in step 6.
 * Add the Mono environment variable to the system PATH. This is its own multi-step process. Instructions here are for Windows 10:
@@ -89,15 +100,15 @@ Copyright (C) 2002-2014 Novell, Inc, Xamarin Inc and Contributors. www.mono-proj
 
 ----
 
-**Installing MAMP**
+### Installing MAMP
 ** MAMP is free server and database software used to create, edit, connect to, query, and manage databases.
 
-**Mac** 
+#### Mac MAMP
 ** Download the Mac version of MAMP from the MAMP Downloads Page.
 ** Open the downloaded .pkg file to run the installer.
 ** Proceed to the Configuring Port Numbers section below.
 
-**Windows**
+#### Windows MAMP
 ** Download the Windows version of MAMP from the MAMP Downloads Page.
 ** Open the downloaded .exe file to launch the installer. Its default settings are fine, but pay careful attention the location you install MAMP, even if using the default. We'll need this info shortly.
 ** Add the MySQL environment variable to the System PATH. Just like with Mono, we must include MySQL (a type of database MAMP uses) in the System Environment Path Variable. This is its own multi-step process. Instructions here are for Windows 10:
@@ -106,7 +117,10 @@ Copyright (C) 2002-2014 Novell, Inc, Xamarin Inc and Contributors. www.mono-proj
 ** Add the exact location of your MySQL installation, as mentioned in step two above, and click OK. (This location is likely C:\MAMP\bin\mysql\bin, but may differ depending on your specific installation.)
 ** If you receive error stating the command mySQL is "not recognized", the location you provided is likely inaccurate. Double-check it and try again.
 ** Proceed to the Configuring Port Numbers section below.
-** Configuring Port Numbers (Both Mac and Windows)
+
+----
+
+#### Configuring Port Numbers (Both Mac and Windows)
 ** Both Mac and Windows users must configure Apache and MySQL to use the correct port numbers.
 ** Launch MAMP by locating the application and double-clicking it. (MAMP is a full application accessible through the GUI, not just the command line.)
 ** A popup may appear. If so, uncheck the Check for MAMP Pro when starting MAMP option, then click Launch MAMP. (The free version is fine for our course).
@@ -136,7 +150,7 @@ mysql>
 
 ----
 
-**Opening this Project**
+### Opening this Project
 * Open Mac Terminal or Windows Command Prompt
 * Git clone this repository
 * Type "cd WordCounter.Solution" and press enter to go to the solution directory.
@@ -151,6 +165,8 @@ mysql>
   * Application started. Press Ctrl+C to shut down.
 
 * Open a web browser and go to http://localhost:5000/*
+
+----
 
 
 ## Technologies Used
