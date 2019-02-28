@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using WordCounterGame.Controllers;
 using WordCounterGame.Models;
 
-namespace WordCounterGame.Tests
+namespace WordCounter.Tests
 {
     [TestClass]
     public class HomeControllerTest

@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
-namespace WordCounter.Controllers
+namespace WordCounterGame.Controllers
 {
   public class HomeController : Controller
   {
