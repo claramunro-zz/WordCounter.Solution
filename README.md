@@ -45,6 +45,25 @@ Each spec should include a specific input and output, and a description sentence
 
 ----
 
+## Technologies Used
+* C#
+* .NET Core
+* Mono
+
+----
+
+## GitHub Repository
+https://github.com/claramunro/WordCounter.Solution
+
+----
+
+## Known Bugs
+None.
+
+Copyright (c) 2019 Clara Munro
+
+----
+
 ## Setup Instructions
 
 ### Install .NET framework (which includes the C# language)
@@ -70,21 +89,8 @@ Each spec should include a specific input and output, and a description sentence
 #### Mac Mono
 * Download the Mac version from the Download section of the Mono website.
 * Open the downloaded .pkg file to run the installation wizard.
-* Confirm the installation is successful by running the command $ mono --version. You should see a response like this (it doesn't have to match exactly):
-
-Mono JIT compiler version 5.10.1.57 (2017-12/ea8a24b1bbf Tue Apr 24 14:53:01 EDT 2018)
-Copyright (C) 2002-2014 Novell, Inc, Xamarin Inc and Contributors. www.mono-project.com
-    TLS:           normal
-    SIGSEGV:       altstack
-    Notification:  kqueue
-    Architecture:  amd64
-    Disabled:      none
-    Misc:          softdebug
-    Interpreter:   yes
-    LLVM:          yes(3.6.0svn-mono-master/8b1520c8aae)
-    GC:            sgen (concurrent by default)
-    
-**This means Mono is successfully installed, and our computer recognizes the corresponding $ mono command. Great!
+* Confirm the installation is successful by running the command $ mono --version
+**This means Mono is successfully installed, and our computer recognizes the corresponding $ mono command.**
 
 ----
 
@@ -95,58 +101,57 @@ Copyright (C) 2002-2014 Novell, Inc, Xamarin Inc and Contributors. www.mono-proj
 * Open the Control Panel and visit System > Advanced System Settings > Environment Variables...
 * Then select PATH..., click Edit..., then Add.
 * Add the exact location of your Mono installation, as mentioned in step two above, and click OK. (This location is likely C:\Program Files(x86)\Mono\bin\ or C:\Program Files\Mono\bin\, but may differ depending on your specific installation settings.)
-* Confirm the installation is successful by restarting the Windows PowerShell, and running the command $ mono --version. You should see a response fairly similar to the one depicted above.
-**This means Mono is successfully installed, and our computer recognizes the $ mono command.
+* Confirm the installation is successful by restarting the Windows PowerShell, and running the command $ mono --version
+**This means Mono is successfully installed, and our computer recognizes the $ mono command.**
 
 ----
 
 ### Installing MAMP
-** MAMP is free server and database software used to create, edit, connect to, query, and manage databases.
+* MAMP is free server and database software used to create, edit, connect to, query, and manage databases.
 
 #### Mac MAMP
-** Download the Mac version of MAMP from the MAMP Downloads Page.
-** Open the downloaded .pkg file to run the installer.
-** Proceed to the Configuring Port Numbers section below.
+* Download the Mac version of MAMP from the MAMP Downloads Page.
+* Open the downloaded .pkg file to run the installer.
+* Proceed to the Configuring Port Numbers section below.
 
 #### Windows MAMP
-** Download the Windows version of MAMP from the MAMP Downloads Page.
-** Open the downloaded .exe file to launch the installer. Its default settings are fine, but pay careful attention the location you install MAMP, even if using the default. We'll need this info shortly.
-** Add the MySQL environment variable to the System PATH. Just like with Mono, we must include MySQL (a type of database MAMP uses) in the System Environment Path Variable. This is its own multi-step process. Instructions here are for Windows 10:
-** Open the Control Panel and visit System > Advanced System Settings > Environment Variables...
-** Then select PATH..., click Edit..., then Add.
-** Add the exact location of your MySQL installation, as mentioned in step two above, and click OK. (This location is likely C:\MAMP\bin\mysql\bin, but may differ depending on your specific installation.)
-** If you receive error stating the command mySQL is "not recognized", the location you provided is likely inaccurate. Double-check it and try again.
-** Proceed to the Configuring Port Numbers section below.
+* Download the Windows version of MAMP from the MAMP Downloads Page.
+* Open the downloaded .exe file to launch the installer. Its default settings are fine, but pay careful attention the location you install MAMP, even if using the default. We'll need this info shortly.
+* Add the MySQL environment variable to the System PATH. Just like with Mono, we must include MySQL (a type of database MAMP uses) in the System Environment Path Variable. This is its own multi-step process. Instructions here are for Windows 10:
+* Open the Control Panel and visit System > Advanced System Settings > Environment Variables...
+* Then select PATH..., click Edit..., then Add.
+* Add the exact location of your MySQL installation, as mentioned in step two above, and click OK. (This location is likely C:\MAMP\bin\mysql\bin, but may differ depending on your specific installation.)
+* If you receive error stating the command mySQL is "not recognized", the location you provided is likely inaccurate. Double-check it and try again.
+* Proceed to the Configuring Port Numbers section below.
 
 ----
 
 #### Configuring Port Numbers (Both Mac and Windows)
-** Both Mac and Windows users must configure Apache and MySQL to use the correct port numbers.
-** Launch MAMP by locating the application and double-clicking it. (MAMP is a full application accessible through the GUI, not just the command line.)
-** A popup may appear. If so, uncheck the Check for MAMP Pro when starting MAMP option, then click Launch MAMP. (The free version is fine for our course).
-** You should see a MAMP window with several options. Click Preferences (or visit MAMP > Preferences in the toolbar) then select the Ports tab.
-** Set the Apache Port to 8888, the MySQL Port to 8889, then click OK.
-** Confirm MAMP and MySQL have been installed correctly by clicking Start Servers in the MAMP window. This will open a page with server data in the browser. You can close this.
-** Connect to the server we just started by running $ mysql -uroot -proot in the command line.
-** If you receive an error about not being able to connect to servers, or the command not being found, try running one of the following (the file path in these commands must match your MAMP installation location):
+* Both Mac and Windows users must configure Apache and MySQL to use the correct port numbers.
+* Launch MAMP by locating the application and double-clicking it. (MAMP is a full application accessible through the GUI, not just the command line.)
+* A popup may appear. If so, uncheck the Check for MAMP Pro when starting MAMP option, then click Launch MAMP. (The free version is fine for our course).
+* You should see a MAMP window with several options. Click Preferences (or visit MAMP > Preferences in the toolbar) then select the Ports tab.
+* Set the Apache Port to 8888, the MySQL Port to 8889, then click OK.
+* Confirm MAMP and MySQL have been installed correctly by clicking Start Servers in the MAMP window. This will open a page with server data in the browser. You can close this.
+* Connect to the server we just started by running $ mysql -uroot -proot in the command line.
+* If you receive an error about not being able to connect to servers, or the command not being found, try running one of the following (the file path in these commands must match your MAMP installation location):
 
-  ** For Mac: /Applications/MAMP/Library/bin/mysql --host=localhost -uroot -proot
-  ** For Windows: C:\MAMP\bin\mysql --host=localhost -uroot -proot
+  * For Mac: /Applications/MAMP/Library/bin/mysql --host=localhost -uroot -proot
+  * For Windows: C:\MAMP\bin\mysql --host=localhost -uroot -proot
 
-** You should see a response like this in the command line:
-** Welcome to the MySQL monitor.  Commands end with ; or \g.
-** Your MySQL connection id is 2
-** Server version: 5.7.23 MySQL Community Server (GPL)
-** Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
-** Oracle is a registered trademark of Oracle Corporation and/or its affiliates. Other names may be trademarks of their respective
+* You should see a response like this in the command line:
+* Welcome to the MySQL monitor.  Commands end with ; or \g.
+* Your MySQL connection id is 2
+* Server version: 5.7.23 MySQL Community Server (GPL)
+* Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+* Oracle is a registered trademark of Oracle Corporation and/or its affiliates. Other names may be trademarks of their respective
 owners.
+* Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-
-mysql>
+**mysql>**
 
 **This means you're logged into a MySQL server with the username root and password root. More importantly, it means your installation is successful!**
-** You can now quit MySQL by running the following in the terminal: \q.
+* You can now quit MySQL by running the following in the terminal: \q.
 
 ----
 
@@ -165,19 +170,3 @@ mysql>
   * Application started. Press Ctrl+C to shut down.
 
 * Open a web browser and go to http://localhost:5000/*
-
-----
-
-
-## Technologies Used
-* C#
-* .NET Core
-* Mono
-
-## GitHub Repository
-https://github.com/claramunro/WordCounter.Solution
-
-## Known Bugs
-None.
-
-Copyright (c) 2019 Clara Munro
